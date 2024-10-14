@@ -12,4 +12,5 @@ class Payment(Base, TimestampMixin):
     id = Column(Integer, autoincrement=True, primary_key=True, unique=True)
     debt_id = Column(Integer, ForeignKey('debts.id'), nullable=False)
     amount_paid = Column(DECIMAL(10, 2), nullable=False)
-    payment_date = Column(Date, )
+    payment_date = Column(Date)
+    
